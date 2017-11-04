@@ -8,6 +8,7 @@ const users = require('./routes/users');
 const config = require('./config/database');
 
 // Connect to Database
+mongoose.Promise = global.Promise;
 mongoose.connect(config.database, { useMongoClient: true });
 
 // On Connection
